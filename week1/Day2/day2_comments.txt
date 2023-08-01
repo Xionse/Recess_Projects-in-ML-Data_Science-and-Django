@@ -1,0 +1,59 @@
+# Exception Handling in Python:
+"""
+
+# In Python, exception handling is a mechanism to handle errors or exceptional situations that may occur during program execution.
+# It allows you to catch and handle specific exceptions gracefully, preventing the program from crashing.
+
+# The basic structure of exception handling in Python involves the following keywords:
+
+# try:
+#     The code block placed inside the 'try' block is the one where an exception might occur.
+#     It is the section of code where you anticipate potential errors.
+
+# except ExceptionType:
+#     If an exception of type 'ExceptionType' occurs inside the 'try' block, the corresponding 'except' block is executed.
+#     'ExceptionType' represents the specific type of exception that you want to handle.
+#     You can catch and handle specific exceptions, such as ValueError, TypeError, or FileNotFoundError, or use a more general 'except' block to handle any exception.
+
+# except ExceptionType as error:
+#     You can assign the exception instance to a variable 'error' using the 'as' keyword.
+#     This allows you to access the details of the exception and handle it accordingly.
+
+# else:
+#     The 'else' block is optional and executed if no exceptions occur in the 'try' block.
+#     It contains code that should run only if the 'try' block does not raise any exceptions.
+
+# finally:
+#     The 'finally' block is optional and always executed, regardless of whether an exception occurred or not.
+#     It is useful for performing cleanup tasks or releasing resources that should be done regardless of the outcome of the exception handling.
+
+
+try:
+    # Code that may raise an exception
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+
+except ZeroDivisionError:
+    # Handling a specific exception (division by zero)
+    print("Cannot divide by zero")
+
+except ValueError as error:
+    # Handling a specific exception (invalid input)
+    print("Invalid input:", str(error))
+
+except Exception as error:
+    # Handling any other exception
+    print("An error occurred:", str(error))
+
+else:
+    # Code executed if no exceptions occur
+    print("No exceptions occurred")
+
+finally:
+    # Code always executed
+    print("Finally block")
+
+
+
+"""

@@ -1,0 +1,49 @@
+import tkinter as tk: Imports the Tkinter module and assigns it an alias tk for easier referencing.
+
+def button_click(number): Defines a function button_click that takes a number parameter. This function is called when a number button is clicked.
+
+current = entry.get(): Retrieves the current contents of the entry field and stores it in the current variable.
+
+entry.delete(0, tk.END): Clears the entry field by deleting all its contents.
+
+entry.insert(tk.END, current + str(number)): Inserts the number clicked into the entry field by concatenating it with the previous contents (current) and inserting it at the end of the field.
+
+def button_clear(): Defines a function button_clear that is called when the clear button is clicked.
+
+entry.delete(0, tk.END): Clears the entry field by deleting all its contents.
+
+def button_equal(): Defines a function button_equal that is called when the equal button is clicked.
+
+expression = entry.get(): Retrieves the current contents of the entry field and stores it in the expression variable.
+
+try:: Starts a try-except block to handle any potential errors during the evaluation of the expression.
+
+result = eval(expression): Evaluates the expression using the eval() function, which interprets and calculates the result.
+
+entry.delete(0, tk.END): Clears the entry field by deleting all its contents.
+
+entry.insert(tk.END, result): Inserts the result of the evaluated expression into the entry field.
+
+except Exception:: Catches any exceptions that might occur during the evaluation of the expression.
+
+entry.delete(0, tk.END): Clears the entry field by deleting all its contents.
+
+entry.insert(tk.END, "Error"): Inserts the string "Error" into the entry field to indicate that an error occurred during the evaluation.
+
+window = tk.Tk(): Creates the main window for the calculator application.
+
+window.title("Calculator"): Sets the title of the window to "Calculator".
+
+entry = tk.Entry(window, width=30): Creates an entry field widget within the window with a width of 30 characters.
+
+entry.grid(row=0, column=0, columnspan=4): Positions the entry field in the first row and spans across all four columns.
+
+The following lines of code create buttons for numbers (1-9), number 0, and operator buttons (+, -, *, /).
+
+button.grid(row=... positions each button in the desired row and column of the grid layout.
+
+button_click(1) is passed as the command parameter for each number button to call the button_click function when the button is clicked.
+
+button_clear and button_equal are passed as the command parameter for the clear and equal buttons, respectively, to call the corresponding functions when clicked.
+
+window.mainloop(): Starts the main event loop, which keeps the window running until it is closed. This loop waits for events (such as button clicks) and handles them accordingly.
